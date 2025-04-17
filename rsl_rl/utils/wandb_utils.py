@@ -79,7 +79,7 @@ class WandbSummaryWriter(SummaryWriter):
 
     def add_video_files(self, log_dir: str, step: int, fps: int = 30):
         # Check if there are video files in the video directory
-        videos_dir = os.path.join(log_dir, "videos", "train")
+        videos_dir = os.path.join(log_dir, "videos")
         if os.path.exists(videos_dir):
             # append the new video files to the existing list
             for root, dirs, files in os.walk(videos_dir):
